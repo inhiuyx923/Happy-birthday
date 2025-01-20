@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compliments & Praise</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            transition: background 0.5s ease-in-out;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 18px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px 60px;
+            width: 90%;
+            max-width: 500px;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        #compliment {
+            font-size: 1.5rem;
+            color: #333;
+            font-weight: 400;
+            margin-bottom: 40px;
+            line-height: 1.5;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 16px 32px;
+            background-color: #007aff;
+            color: #fff;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .button:hover {
+            background-color: #0051ba;
+        }
+
+        .button:active {
+            background-color: #004299;
+            transform: scale(0.98);
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 1rem;
+            color: #888;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            #compliment {
+                font-size: 1.2rem;
+            }
+
+            .button {
+                font-size: 1rem;
+                padding: 12px 24px;
+                width: 100%;
+            }
+
+            .container {
+                padding: 30px 40px;
+            }
+        }
+
+        /* Background image array */
+        const backgroundImages = [
+            'url("https://source.unsplash.com/1600x900/?nature,1")',
+            'url("https://source.unsplash.com/1600x900/?nature,2")',
+            'url("https://source.unsplash.com/1600x900/?nature,3")',
+            'url("https://source.unsplash.com/1600x900/?sunset")',
+            'url("https://source.unsplash.com/1600x900/?city,night")',
+            'url("https://source.unsplash.com/1600x900/?mountain,sky")'
+        ];
+
+        let compliments = [
+            "You are amazing! 🌟",
+            "You're an incredible person! 💖",
+            "Your smile lights up the room! 😁",
+            "You're so talented! 🎨",
+            "Every time I'm with you, I'm so happy! 😊",
+            "You have a great sense of humor! 😂",
+            "You're so charming! 😘",
+            "You have a wonderful personality! 🌈",
+            "Your wisdom is impressive! 📚",
+            "You are a great friend! 👫",
+            "You inspire me every day! 💪",
+            "You're so thoughtful and kind! 🤗",
+            "You make the world a better place! 🌍",
+            "Your presence makes everyone happy! 😄",
+            "You have such a beautiful soul! 💫",
+            "You're always so positive and full of energy! ⚡"
+        ];
+
+        // Show a random compliment and change the background image
+        function showCompliment() {
+            // Get a random compliment
+            const randomIndex = Math.floor(Math.random() * compliments.length);
+            const randomCompliment = compliments[randomIndex];
+
+            // Change the background image
+            const randomBackgroundIndex = Math.floor(Math.random() * backgroundImages.length);
+            document.body.style.backgroundImage = backgroundImages[randomBackgroundIndex];
+
+            // Apply the compliment with an animation effect
+            const complimentElement = document.getElementById("compliment");
+            complimentElement.style.transform = "scale(1.1)";
+            setTimeout(() => {
+                complimentElement.style.transform = "scale(1)";
+            }, 300);
+
+            // Display the compliment
+            complimentElement.textContent = randomCompliment;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Happy Birthday! 🎉🎂</h1>
+    <div id="compliment">You are the best person in the world! 🌟</div>
+    <button class="button" onclick="showCompliment()">Click for Happiness 😊</button>
+    <div class="footer">
+        <p>Enjoy the compliments and feel happy! 🎈</p>
+    </div>
+</div>
+
+<script>
+    // Background images array
+    const backgroundImages = [
+        'url("https://source.unsplash.com/1600x900/?nature,1")',
+        'url("https://source.unsplash.com/1600x900/?nature,2")',
+        'url("https://source.unsplash.com/1600x900/?nature,3")',
+        'url("https://source.unsplash.com/1600x900/?sunset")',
+        'url("https://source.unsplash.com/1600x900/?city,night")',
+        'url("https://source.unsplash.com/1600x900/?mountain,sky")'
+    ];
+
+    // Compliments array with emoji
+    const compliments = [
+        "You are amazing! 🌟",
+        "You're an incredible person! 💖",
+        "Your smile lights up the room! 😁",
+        "You're so talented! 🎨",
+        "Every time I'm with you, I'm so happy! 😊",
+        "You have a great sense of humor! 😂",
+        "You're so charming! 😘",
+        "You have a wonderful personality! 🌈",
+        "Your wisdom is impressive! 📚",
+        "You are a great friend! 👫",
+        "You inspire me every day! 💪",
+        "You're so thoughtful and kind! 🤗",
+        "You make the world a better place! 🌍",
+        "Your presence makes everyone happy! 😄",
+        "You have such a beautiful soul! 💫",
+        "You're always so positive and full of energy! ⚡"
+    ];
+
+    // Show a random compliment and change the background image
+    function showCompliment() {
+        // Get a random compliment
+        const randomIndex = Math.floor(Math.random() * compliments.length);
+        const randomCompliment = compliments[randomIndex];
+
+        // Change the background image
+        const randomBackgroundIndex = Math.floor(Math.random() * backgroundImages.length);
+        document.body.style.backgroundImage = backgroundImages[randomBackgroundIndex];
+
+        // Apply the compliment with an animation effect
+        const complimentElement = document.getElementById("compliment");
+        complimentElement.style.transform = "scale(1.1)";
+        setTimeout(() => {
+            complimentElement.style.transform = "scale(1)";
+        }, 300);
+
+        // Display the compliment
+        complimentElement.textContent = randomCompliment;
+    }
+</script>
+
+</body>
+</html>
